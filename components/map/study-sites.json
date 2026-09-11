@@ -1,0 +1,145 @@
+[
+  {
+    "id": "juabeso-bia",
+    "name": "Juabeso-Bia Landscape",
+    "region": "Western North Region",
+    "coords": [6.55, -2.85],
+    "category": "cocoa-forest",
+    "period": "2017 – 2022",
+    "summary": "Flagship cocoa-forest mosaic study area. Developed pixel-based and object-oriented approaches to separate cocoa agroforestry from natural forest, and documented cocoa expanding into food croplands.",
+    "themes": ["cocoa", "deforestation", "remote-sensing"],
+    "publications": ["cocoa-segregation-juabeso-bia-2020", "cocoa-food-expansion-2021"]
+  },
+  {
+    "id": "wassa-amenfi",
+    "name": "Wassa Amenfi Landscape",
+    "region": "Western Region",
+    "coords": [5.92, -2.12],
+    "category": "cocoa-forest",
+    "period": "2020",
+    "summary": "Produced land use / land cover maps (2016 & 2020) distinguishing intensive cocoa from agroforestry systems for IUCN's RESUPPLY project, with change analysis and field validation.",
+    "themes": ["cocoa", "land-use", "mapping"],
+    "publications": []
+  },
+  {
+    "id": "kwaebibirem-atiwa",
+    "name": "Kwaebibirem & Atiwa West",
+    "region": "Eastern Region",
+    "coords": [6.18, -0.72],
+    "category": "cocoa-forest",
+    "period": "2020 – 2022",
+    "summary": "Study districts for the CIFOR Governing Multifunctional Landscapes project. Field-tested LULC maps (2015–2020) aligned with Ghana's national REDD+ monitoring protocols.",
+    "themes": ["land-use", "redd+", "cocoa"],
+    "publications": []
+  },
+  {
+    "id": "atewa-range",
+    "name": "Atewa Range Forest Reserve",
+    "region": "Eastern Region",
+    "coords": [6.23, -0.56],
+    "category": "forest",
+    "period": "2021 – 2023",
+    "summary": "Investigated how agriculture-driven habitat modification shapes small mammal communities in this upland evergreen forest — a critical biodiversity and watershed hotspot.",
+    "themes": ["wildlife", "forest", "land-use"],
+    "publications": ["agri-habitat-small-mammals-2022", "small-mammals-demography-2023"]
+  },
+  {
+    "id": "bimpong",
+    "name": "Bimpong Forest Reserve",
+    "region": "Eastern Region",
+    "coords": [6.10, -0.45],
+    "category": "forest",
+    "period": "2021 – 2023",
+    "summary": "Paired study site with Atewa for comparing small mammal assemblages and demography across forest ecosystems under different disturbance pressures.",
+    "themes": ["wildlife", "forest"],
+    "publications": ["agri-habitat-small-mammals-2022", "small-mammals-demography-2023"]
+  },
+  {
+    "id": "keta-lagoon",
+    "name": "Keta Lagoon Complex (Ramsar Site)",
+    "region": "Volta Region",
+    "coords": [5.92, 0.95],
+    "category": "wetland",
+    "period": "2020 – 2021",
+    "summary": "Mapped mangroves with Sentinel-1 radar data to support conservation and restoration decisions in Ghana's largest Ramsar wetland — radar sees through the persistent coastal cloud cover.",
+    "themes": ["wetlands", "mangrove", "remote-sensing"],
+    "publications": ["mangrove-sentinel1-2021"]
+  },
+  {
+    "id": "owabi",
+    "name": "Owabi Wetland Sanctuary",
+    "region": "Ashanti Region",
+    "coords": [6.77, -1.70],
+    "category": "wetland",
+    "period": "2021 – 2022",
+    "summary": "Used dragonflies and damselflies (Odonata) as bioindicators to monitor anthropogenic disturbance around this protected wetland near Kumasi.",
+    "themes": ["wetlands", "wildlife"],
+    "publications": ["odonata-owabi-2022"]
+  },
+  {
+    "id": "kpeshie",
+    "name": "Kpeshie Lagoon Basin",
+    "region": "Greater Accra Region",
+    "coords": [5.58, -0.13],
+    "category": "wetland",
+    "period": "2023",
+    "summary": "Analysed and predicted land use / land cover dynamics in this urban coastal lagoon basin using satellite remote sensing and transition modelling.",
+    "themes": ["land-use", "remote-sensing", "coastal"],
+    "publications": ["kpeshie-lagoon-lulc-2023"]
+  },
+  {
+    "id": "mole",
+    "name": "Mole National Park",
+    "region": "Savannah Region",
+    "coords": [9.27, -1.85],
+    "category": "wildlife",
+    "period": "2017",
+    "summary": "Modelled seasonal habitat use by African elephants in Ghana's largest protected area, linking movement patterns to landscape and water availability.",
+    "themes": ["wildlife", "habitat-modelling"],
+    "publications": ["elephants-mole-2017"]
+  },
+  {
+    "id": "kumasi",
+    "name": "Kumasi Metropolis",
+    "region": "Ashanti Region",
+    "coords": [6.69, -1.62],
+    "category": "urban",
+    "period": "2018 – 2020",
+    "summary": "Tracked how urban land transformation affects tree abundance and species richness in Kumasi's second city, as part of wider work on urbanisation's spatio-environmental impacts.",
+    "themes": ["urban", "land-use", "forestry"],
+    "publications": ["kumasi-tree-abundance-2018", "urbanisation-ghana-2020"]
+  },
+  {
+    "id": "accra-fringe",
+    "name": "Accra Peri-Urban Fringe",
+    "region": "Greater Accra Region",
+    "coords": [5.65, -0.30],
+    "category": "urban",
+    "period": "2019",
+    "summary": "Reconstructed 30 years of landscape transformation in rapidly developing peri-urban Accra, quantifying the sprawl of built-up land into farmland and vegetation.",
+    "themes": ["urban", "land-use"],
+    "publications": ["accra-peri-urban-2019"]
+  },
+  {
+    "id": "white-volta",
+    "name": "White Volta Floodplains",
+    "region": "Northern Region",
+    "coords": [9.60, -1.05],
+    "category": "savanna",
+    "period": "2019",
+    "summary": "Quantified recent floodplain vegetation change along the White Volta River, linking shifts to flow regimes and riverside land use in the savanna zone.",
+    "themes": ["rivers", "land-use", "remote-sensing"],
+    "publications": ["white-volta-floodplain-2019"]
+  },
+  {
+    "id": "sunyani-west",
+    "name": "Sunyani West District",
+    "region": "Bono Region",
+    "coords": [7.33, -2.33],
+    "category": "savanna",
+    "period": "2011 – 2014",
+    "summary": "Early-career GIS work: modelled wildfire risk from biophysical factors and managed the APERL project's geospatial support for agroforestry livelihoods.",
+    "themes": ["gis", "wildfire", "agroforestry"],
+    "publications": ["wildfire-modelling-sunyani-2013"]
+  }
+]

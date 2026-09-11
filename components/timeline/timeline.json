@@ -1,0 +1,164 @@
+[
+  {
+    "id": "efi-eudr",
+    "year": 2024,
+    "period": "Nov 2024 – Present",
+    "category": "career",
+    "title": "Remote Sensing Analyst — EUDR Forest/Non-Forest Map Validation",
+    "org": "European Forest Institute",
+    "description": "Validating forest/non-forest maps supporting the EU Deforestation Regulation — applying years of cocoa-landscape research directly to international forest policy.",
+    "current": true,
+    "highlight": true
+  },
+  {
+    "id": "wwf-japan",
+    "year": 2023,
+    "period": "Aug 2023 – Feb 2024",
+    "category": "project",
+    "title": "GIS/Remote Sensing Consultant — Cocoa Deforestation Mapping",
+    "org": "WWF Japan",
+    "description": "Mapped cocoa-driven deforestation across Ghana's cocoa-forest mosaic landscape, producing evidence for deforestation-free supply chains.",
+    "highlight": true
+  },
+  {
+    "id": "fpen-nigeria",
+    "year": 2022,
+    "period": "2022 – 2023",
+    "category": "project",
+    "title": "GIS/RS Specialist — Forest Positive Exports Nigeria (FPEN)",
+    "org": "Ecometrica / UK PACT",
+    "description": "Improved land cover mapping capacity to monitor cocoa's impact on forests in Nigeria, extending Ghana-tested methods across West Africa."
+  },
+  {
+    "id": "senior-lecturer",
+    "year": 2022,
+    "period": "Aug 2022 – Present",
+    "category": "career",
+    "title": "Senior Lecturer, Dept. of Wildlife & Range Management",
+    "org": "Faculty of Renewable Natural Resources, KNUST",
+    "description": "Promoted to Senior Lecturer. Also serves as Deputy Coordinator of the MSc Geo-Information for Natural Resources Management programme.",
+    "current": true,
+    "highlight": true
+  },
+  {
+    "id": "frame-cocoa",
+    "year": 2022,
+    "period": "May 2022 – Present",
+    "category": "project",
+    "title": "Co-PI / RS-GIS Technical Lead — FRAME-Cocoa",
+    "org": "African Plant Nutrition Institute, with CSIR-Soil Research Institute",
+    "description": "Developing a remote-sensing-supported framework for site-specific fertiliser management on smallholder cocoa farms, including gender-specific adoption diagnostics.",
+    "current": true
+  },
+  {
+    "id": "gaf-gmis",
+    "year": 2022,
+    "period": "Oct 2022 – Mar 2023",
+    "category": "project",
+    "title": "GIS Analyst — GMIS Baseline Assessment",
+    "org": "GAF AG / Ghana Geological Survey Authority",
+    "description": "Assessed requirements for an upgraded Geological and Minerals Information Management System for Ghana."
+  },
+  {
+    "id": "cifor-gml",
+    "year": 2020,
+    "period": "Feb 2020 – Apr 2022",
+    "category": "project",
+    "title": "Principal Investigator — Governing Multifunctional Landscapes",
+    "org": "CIFOR (EUR 124,300 subgrant)",
+    "description": "Led field-testing of land use/land cover maps (2015–2020) for Kwaebibirem and Atiwa West, aligned with Ghana's national REDD+ monitoring protocols.",
+    "highlight": true
+  },
+  {
+    "id": "iucn-resupply",
+    "year": 2020,
+    "period": "2020",
+    "category": "project",
+    "title": "Co-PI / RS-GIS Technical Lead — RESUPPLY GIS Mapping",
+    "org": "IUCN Ghana",
+    "description": "Produced LULC maps of the Wassa Amenfi landscape (2016 & 2020), distinguishing intensive cocoa from agroforestry with field-validated change analysis."
+  },
+  {
+    "id": "phd",
+    "year": 2020,
+    "period": "2020",
+    "category": "education",
+    "title": "PhD, Geomatic Engineering",
+    "org": "KNUST, Kumasi",
+    "description": "Doctoral research on remote sensing of Ghana's cocoa-forest landscapes — the foundation of his cocoa/forest segregation methods.",
+    "highlight": true
+  },
+  {
+    "id": "edinburgh",
+    "year": 2019,
+    "period": "2019",
+    "category": "education",
+    "title": "Forest Degradation Mapping Training",
+    "org": "University of Edinburgh, UK",
+    "description": "Specialist training in forest degradation mapping techniques."
+  },
+  {
+    "id": "leicester",
+    "year": 2018,
+    "period": "2018",
+    "category": "education",
+    "title": "SAR Training Certificate",
+    "org": "Centre for Landscape and Climate Research, University of Leicester, UK",
+    "description": "Synthetic Aperture Radar training — radar remote sensing that sees through clouds, later applied to mangrove mapping at Keta Lagoon."
+  },
+  {
+    "id": "forest-2020",
+    "year": 2017,
+    "period": "Apr 2017 – Mar 2021",
+    "category": "project",
+    "title": "Remote Sensing Technical Lead — Forest 2020 Ghana",
+    "org": "Ecometrica / UK Space Agency, with Forestry Commission of Ghana",
+    "description": "Led the remote sensing work on a UK Space Agency project to protect and restore tropical forests — developing Ghana's harmonised cocoa-landscape classification scheme.",
+    "highlight": true
+  },
+  {
+    "id": "lecturer",
+    "year": 2014,
+    "period": "Sep 2014 – Jul 2022",
+    "category": "career",
+    "title": "Research Fellow / Lecturer",
+    "org": "KNUST",
+    "description": "Joined the academic staff, teaching and researching GIS and remote sensing applications in natural resource management."
+  },
+  {
+    "id": "gsdi-paper",
+    "year": 2012,
+    "period": "2012",
+    "category": "project",
+    "title": "First International Conference Paper",
+    "org": "Global Geospatial Conference (GSDI 12), Quebec",
+    "description": "Co-presented 'GIS Application for Local Government Revenue Mobilization' — an early sign of GIS-for-development thinking."
+  },
+  {
+    "id": "aperl",
+    "year": 2011,
+    "period": "2011 – 2014",
+    "category": "career",
+    "title": "GIS Manager — APERL Ghana Project",
+    "org": "KNUST Faculty of Forest Resources Technology",
+    "description": "Managed geospatial work for an agroforestry livelihoods project in Sunyani-West District, and administered the APERL GIS Training & Research Centre."
+  },
+  {
+    "id": "mphil",
+    "year": 2011,
+    "period": "2011",
+    "category": "education",
+    "title": "MPhil, Geomatic Engineering",
+    "org": "KNUST, Kumasi",
+    "description": "Advanced training in geospatial science and engineering."
+  },
+  {
+    "id": "bsc",
+    "year": 2007,
+    "period": "2003 – 2007",
+    "category": "education",
+    "title": "BSc, Geodetic (Geomatic) Engineering",
+    "org": "KNUST, Kumasi",
+    "description": "Where the journey with maps and satellites began."
+  }
+]

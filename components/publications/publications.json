@@ -1,0 +1,256 @@
+[
+  {
+    "id": "shade-tree-modelling-2026",
+    "title": "Modelling the number of shade tree species needed to reach the optimal canopy target in cocoa agroforestry systems",
+    "authors": ["Ashiagbor, G.", "Essah, I. S.", "Baiden, P. P. K.", "Asante, W. A."],
+    "journal": "Agroforestry Systems",
+    "year": 2026,
+    "type": "journal",
+    "themes": ["cocoa", "agroforestry", "remote-sensing"],
+    "volume": "100",
+    "pages": "36"
+  },
+  {
+    "id": "cocoa-eats-food-2025",
+    "title": "Cocoa eats the food: can land-sparing save farmers' food self-sufficiency in Ghana?",
+    "authors": ["Ashiagbor, G.", "Arthur, P. S.", "Essah, I. S.", "Asabre, S. B.", "Antobre, O. A.", "Asante, W. A."],
+    "journal": "GeoJournal",
+    "year": 2025,
+    "type": "journal",
+    "themes": ["cocoa", "food-security", "land-use"],
+    "volume": "90",
+    "pages": "84",
+    "doi": "10.1007/s10708-025-11340-6",
+    "featured": true
+  },
+  {
+    "id": "ml-classifiers-cocoa-forest-2023",
+    "title": "Assessment of machine learning classifiers in mapping the cocoa-forest mosaic landscape of Ghana",
+    "authors": ["Ashiagbor, G.", "Asare-Ansah, A. O.", "Amoah, E. B.", "Asante, W. A.", "Mensah, Y. A."],
+    "journal": "Scientific African",
+    "year": 2023,
+    "type": "journal",
+    "themes": ["cocoa", "remote-sensing", "machine-learning", "deforestation"],
+    "volume": "20",
+    "pages": "e01718"
+  },
+  {
+    "id": "kpeshie-lagoon-lulc-2023",
+    "title": "Analysis and prediction of land use land cover dynamics in the Kpeshie Lagoon Basin of Ghana using satellite remote sensing",
+    "authors": ["Asare, Y. M.", "Selby, I.", "Ashiagbor, G.", "Asante, C. Y."],
+    "journal": "Journal of the Ghana Institution of Engineers",
+    "year": 2023,
+    "type": "journal",
+    "themes": ["land-use", "remote-sensing", "wetlands"],
+    "volume": "23(1)",
+    "pages": "33-43"
+  },
+  {
+    "id": "small-mammals-demography-2023",
+    "title": "Demography and reproductive seasonality of small terrestrial mammals in two forest ecosystems in Ghana",
+    "authors": ["Adjapong, A. O.", "Ashiagbor, G.", "Oppong, S. K."],
+    "journal": "African Journal of Ecology",
+    "year": 2023,
+    "type": "journal",
+    "themes": ["wildlife", "forest"],
+    "volume": "61(2)",
+    "pages": "469-481"
+  },
+  {
+    "id": "cocoa-deforestation-policy-2022",
+    "title": "Monitoring cocoa-driven deforestation: The contexts of encroachment and land use policy implications for deforestation-free cocoa supply chains in Ghana",
+    "authors": ["Ashiagbor, G.", "Asante, W. A.", "Forkuo, E. K."],
+    "journal": "Applied Geography",
+    "year": 2022,
+    "type": "journal",
+    "themes": ["deforestation", "cocoa", "land-use", "policy"],
+    "volume": "147",
+    "pages": "102788",
+    "featured": true
+  },
+  {
+    "id": "cashew-carbon-2022",
+    "title": "Cashew expansion holds potential for carbon stocks enhancement in the forest-savannah transitional zone of Ghana",
+    "authors": ["Ashiagbor, G.", "Asante, W. A."],
+    "journal": "Land Use Policy",
+    "year": 2022,
+    "type": "journal",
+    "themes": ["carbon", "land-use", "agroforestry"],
+    "volume": "121",
+    "pages": "106318"
+  },
+  {
+    "id": "odonata-owabi-2022",
+    "title": "Odonata as bioindicator for monitoring anthropogenic disturbance of Owabi wetland sanctuary, Ghana",
+    "authors": ["Manu, M. K.", "Ashiagbor, G."],
+    "journal": "Aquatic Insects",
+    "year": 2022,
+    "type": "journal",
+    "themes": ["wetlands", "wildlife"]
+  },
+  {
+    "id": "agri-habitat-small-mammals-2022",
+    "title": "Agri-driven habitat modification and small mammal species assemblage nexus in the Atewa Range and Bimpong Forest Reserves of Ghana",
+    "authors": ["Adjapong, A. O.", "Ashiagbor, G."],
+    "journal": "Trees, Forests and People",
+    "year": 2022,
+    "type": "journal",
+    "themes": ["wildlife", "forest", "land-use"],
+    "volume": "10",
+    "pages": "100335"
+  },
+  {
+    "id": "sw-ghana-land-dynamics-2022",
+    "title": "Analysing variations in size and intensities in land use dynamics for sustainable land use management: coastal landscapes of South-Western Ghana",
+    "authors": ["Asante-Yeboah, E.", "Ashiagbor, G."],
+    "journal": "Land",
+    "year": 2022,
+    "type": "journal",
+    "themes": ["land-use", "coastal"],
+    "volume": "11(6)",
+    "pages": "815"
+  },
+  {
+    "id": "cocoa-food-expansion-2021",
+    "title": "Cocoa eats the food: expansion of cocoa into food croplands in the Juabeso District, Ghana",
+    "authors": ["Ajagun, E. O.", "Ashiagbor, G."],
+    "journal": "Food Security",
+    "year": 2021,
+    "type": "journal",
+    "themes": ["cocoa", "food-security", "land-use"]
+  },
+  {
+    "id": "mangrove-sentinel1-2021",
+    "title": "Mangrove mapping using Sentinel-1 data for improved decision support on sustainable conservation and restoration interventions in the Keta Lagoon Complex Ramsar Site, Ghana",
+    "authors": ["Ashiagbor, G."],
+    "journal": "Marine and Freshwater Research",
+    "year": 2021,
+    "type": "journal",
+    "themes": ["wetlands", "remote-sensing", "mangrove"],
+    "volume": "72"
+  },
+  {
+    "id": "cocoa-segregation-juabeso-bia-2020",
+    "title": "Pixel-based and object-oriented approaches in segregating cocoa from forest in the Juabeso-Bia landscape of Ghana",
+    "authors": ["Ashiagbor, G.", "Forkuo, E. K.", "Asante, W. A."],
+    "journal": "Remote Sensing Applications: Society and Environment",
+    "year": 2020,
+    "type": "journal",
+    "themes": ["cocoa", "remote-sensing", "deforestation"],
+    "volume": "19",
+    "pages": "100349",
+    "featured": true
+  },
+  {
+    "id": "urbanisation-ghana-2020",
+    "title": "Urbanisation, land use transformation and spatio-environmental impacts: an assessment of three major metropolitan regions of Ghana",
+    "authors": ["Asabere, S. B.", "Ashiagbor, G."],
+    "journal": "Land Use Policy",
+    "year": 2020,
+    "type": "journal",
+    "themes": ["urban", "land-use"],
+    "volume": "96",
+    "pages": "104707"
+  },
+  {
+    "id": "white-volta-floodplain-2019",
+    "title": "Quantifying recent floodplain vegetation change along the White Volta River, Northern Region, Ghana",
+    "authors": ["Nsor, C. A.", "Ashiagbor, G.", "Danquah, E."],
+    "journal": "Ghana Journal of Geography",
+    "year": 2019,
+    "type": "journal",
+    "themes": ["land-use", "remote-sensing", "rivers"],
+    "volume": "11(1)",
+    "pages": "159-179"
+  },
+  {
+    "id": "mercury-asgm-2019",
+    "title": "The clinical importance of the mercury problem in artisanal small-scale gold mining",
+    "authors": ["Afrifa, J.", "Ashiagbor, G."],
+    "journal": "Frontiers in Public Health",
+    "year": 2019,
+    "type": "journal",
+    "themes": ["mining", "health"],
+    "volume": "7",
+    "pages": "131"
+  },
+  {
+    "id": "accra-peri-urban-2019",
+    "title": "Landscape transformations in rapidly developing peri-urban areas of Accra, Ghana: results of 30 years",
+    "authors": ["Ashiagbor, G.", "Amoako, C.", "Asabere, S. B.", "Quaye-Ballard, J. A."],
+    "journal": "Open Geosciences",
+    "year": 2019,
+    "type": "journal",
+    "themes": ["urban", "land-use"],
+    "volume": "11(1)",
+    "pages": "172-182"
+  },
+  {
+    "id": "kumasi-tree-abundance-2018",
+    "title": "Urban land transformations and its implication on tree abundance distribution and richness in Kumasi, Ghana",
+    "authors": ["Agyapong, E. B.", "Ashiagbor, G.", "Nsor, C. A.", "van Leeuwen, L. M."],
+    "journal": "Journal of Urban Ecology",
+    "year": 2018,
+    "type": "journal",
+    "themes": ["urban", "forestry"],
+    "volume": "4(1)"
+  },
+  {
+    "id": "elephants-mole-2017",
+    "title": "Seasonal habitat use by elephants (Loxodonta africana) in the Mole National Park of Ghana",
+    "authors": ["Ashiagbor, G.", "Danquah, E."],
+    "journal": "Ecology and Evolution",
+    "year": 2017,
+    "type": "journal",
+    "themes": ["wildlife"],
+    "volume": "7(11)"
+  },
+  {
+    "id": "rusle-soil-erosion-2013",
+    "title": "Modeling soil erosion using RUSLE and GIS tools",
+    "authors": ["Ashiagbor, G.", "Forkuo, E. K.", "Laari, P.", "Aabeyir, R."],
+    "journal": "International Journal of Remote Sensing & Geoscience",
+    "year": 2013,
+    "type": "journal",
+    "themes": ["soil", "remote-sensing", "gis"],
+    "volume": "2(4)",
+    "pages": "1-17"
+  },
+  {
+    "id": "wildfire-modelling-sunyani-2013",
+    "title": "Modelling the spatial interactions of biophysical factors associated with the likelihood of wildfires in the Sunyani West District of Ghana",
+    "authors": ["Ashiagbor, G.", "Laari, B. P."],
+    "journal": "Conference paper",
+    "year": 2013,
+    "type": "conference",
+    "themes": ["gis", "wildfire", "modelling"]
+  },
+  {
+    "id": "gis-revenue-mobilization-2012",
+    "title": "GIS Application for Local Government Revenue Mobilization",
+    "authors": ["Fosu, C.", "Ashiagbor, G."],
+    "journal": "Global Geospatial Conference (GSDI 12), Quebec",
+    "year": 2012,
+    "type": "conference",
+    "themes": ["gis", "governance"]
+  },
+  {
+    "id": "wwf-japan-report-2024",
+    "title": "Remote sensing mapping of cocoa deforestation in the cocoa-forest landscape of Ghana",
+    "authors": ["Ashiagbor, G."],
+    "journal": "Technical report, WWF Japan, Tokyo",
+    "year": 2024,
+    "type": "report",
+    "themes": ["cocoa", "deforestation", "remote-sensing"]
+  },
+  {
+    "id": "unep-wcmc-report-2022",
+    "title": "Identifying opportunity areas for agroforestry to meet cocoa and forest policy objectives in Ghana",
+    "authors": ["Ashiagbor, G."],
+    "journal": "Technical report, UNEP World Conservation Monitoring Centre, Cambridge UK",
+    "year": 2022,
+    "type": "report",
+    "themes": ["agroforestry", "cocoa", "policy"],
+    "url": "https://resources.unep-wcmc.org/products/WCMC_RT493"
+  }
+]
