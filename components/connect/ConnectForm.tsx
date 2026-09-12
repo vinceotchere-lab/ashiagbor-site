@@ -27,10 +27,7 @@ export default function ConnectForm() {
   const [errors, setErrors] = useState<Errors>({});
   const [sent, setSent] = useState(false);
 
-  const inputCls = (bad?: string) =>
-    `w-full rounded-xl border bg-surface px-3.5 py-2.5 text-sm text-ink outline-none transition-colors placeholder:text-muted/60 focus:ring-2 focus:ring-forest/30 ${
-      bad ? "border-terra" : "border-line focus:border-forest"
-    }`;
+  const inputCls = (bad?: string) => `field-input ${bad ? "has-error" : ""}`;
 
   const validate = (): boolean => {
     const e: Errors = {};
@@ -56,7 +53,7 @@ export default function ConnectForm() {
 
   if (sent) {
     return (
-      <div className="data-panel p-8 text-center">
+      <div className="message-sent">
         <h3 className="mt-3 font-display text-lg font-semibold text-ink">
           Your mail app should have opened
         </h3>
@@ -78,12 +75,11 @@ export default function ConnectForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="data-panel space-y-4 p-6 sm:p-8">
-      <div className="grid gap-4 sm:grid-cols-2">
-        <div>
-          <label htmlFor="cf-name" className="mb-1.5 block text-sm font-semibold text-ink">
-            Your name
-          </label>
+    <form onSubmit={handleSubmit} noValidate className="field-form">
+      <div className="field-form-intro"><span>TRANSMISSION FORM / GHA–KNUST</span><p>Share enough context to make the first response useful. Your message opens in your own mail application.</p></div>
+      <div className="field-pair">
+        <div className="field-group">
+          <label htmlFor="cf-name"><span>01</span>Your name</label>
           <input
             id="cf-name"
             value={name}
@@ -93,10 +89,8 @@ export default function ConnectForm() {
           />
           {errors.name && <p className="mt-1 text-xs text-terra">{errors.name}</p>}
         </div>
-        <div>
-          <label htmlFor="cf-email" className="mb-1.5 block text-sm font-semibold text-ink">
-            Your email
-          </label>
+        <div className="field-group">
+          <label htmlFor="cf-email"><span>02</span>Your email</label>
           <input
             id="cf-email"
             type="email"
@@ -109,10 +103,8 @@ export default function ConnectForm() {
         </div>
       </div>
 
-      <div>
-        <label htmlFor="cf-topic" className="mb-1.5 block text-sm font-semibold text-ink">
-          What is this about?
-        </label>
+      <div className="field-group">
+        <label htmlFor="cf-topic"><span>03</span>What is this about?</label>
         <select
           id="cf-topic"
           value={topic}
@@ -125,29 +117,22 @@ export default function ConnectForm() {
         </select>
       </div>
 
-      <div>
-        <label htmlFor="cf-message" className="mb-1.5 block text-sm font-semibold text-ink">
-          Message
-        </label>
+      <div className="field-group">
+        <label htmlFor="cf-message"><span>04</span>Message</label>
         <textarea
           id="cf-message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           rows={5}
           placeholder="Tell him about your project, research idea, or question…"
-          className={`${inputCls(errors.message)} resize-y`}
+          className={inputCls(errors.message)}
         />
         {errors.message && (
           <p className="mt-1 text-xs text-terra">{errors.message}</p>
         )}
       </div>
 
-      <button type="submit" className="btn-primary w-full justify-center sm:w-auto">
-        Send message →
-      </button>
-      <p className="text-xs text-muted">
-        Opens your mail app addressed to {EMAIL}. Nothing is stored on this site.
-      </p>
+      <div className="field-submit"><button type="submit" className="button-primary">Prepare message <span>↗</span></button><p>Nothing is stored on this site.<br/>Destination: {EMAIL}</p></div>
     </form>
   );
 }

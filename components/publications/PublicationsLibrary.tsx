@@ -5,22 +5,30 @@ import { AnimatePresence, motion } from "framer-motion";
 import type { Publication } from "./types";
 import rawData from "./publications.json";
 import PublicationCard from "./PublicationCard";
+import PublicationScrollItem from "./PublicationScrollItem";
+import ScrollContainer from "../shared/ScrollContainer";
+import DomainEmblem, {
+  DomainKey,
+  DOMAIN_METAS,
+  resolveDomainFromTheme,
+} from "../shared/DomainEmblem";
 import StatsBar from "./StatsBar";
 import YearChart, { type YearCount } from "./YearChart";
 
 const publications = rawData as Publication[];
 
 type SortKey = "year-desc" | "year-asc" | "title";
-type ViewMode = "grid" | "timeline";
+type ViewMode = "manuscript" | "timeline";
 
 export default function PublicationsLibrary() {
   const [query, setQuery] = useState("");
   const [activeThemes, setActiveThemes] = useState<string[]>([]);
+  const [activeDomain, setActiveDomain] = useState<DomainKey | "all">("all");
   const [journal, setJournal] = useState("all");
   const [type, setType] = useState("all");
   const [year, setYear] = useState<number | null>(null);
   const [sort, setSort] = useState<SortKey>("year-desc");
-  const [view, setView] = useState<ViewMode>("grid");
+  const [view, setView] = useState<ViewMode>("manuscript");
 
   const allThemes = useMemo(
     () => Array.from(new Set(publications.flatMap((p) => p.themes))).sort(),
@@ -39,13 +47,19 @@ export default function PublicationsLibrary() {
   const clearAll = () => {
     setQuery("");
     setActiveThemes([]);
+    setActiveDomain("all");
     setJournal("all");
     setType("all");
     setYear(null);
   };
 
   const hasFilters =
-    query !== "" || activeThemes.length > 0 || journal !== "all" || type !== "all" || year !== null;
+    query !== "" ||
+    activeThemes.length > 0 ||
+    activeDomain !== "all" ||
+    journal !== "all" ||
+    type !== "all" ||
+    year !== null;
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -59,17 +73,27 @@ export default function PublicationsLibrary() {
       const matchesTheme =
         activeThemes.length === 0 ||
         activeThemes.every((t) => p.themes.includes(t));
+      const matchesDomain =
+        activeDomain === "all" ||
+        p.themes.some((t) => resolveDomainFromTheme(t) === activeDomain);
       const matchesJournal = journal === "all" || p.journal === journal;
       const matchesType = type === "all" || p.type === type;
       const matchesYear = year === null || p.year === year;
-      return matchesQuery && matchesTheme && matchesJournal && matchesType && matchesYear;
+      return (
+        matchesQuery &&
+        matchesTheme &&
+        matchesDomain &&
+        matchesJournal &&
+        matchesType &&
+        matchesYear
+      );
     });
     return [...list].sort((a, b) => {
       if (sort === "title") return a.title.localeCompare(b.title);
       if (sort === "year-asc") return a.year - b.year;
       return b.year - a.year;
     });
-  }, [query, activeThemes, journal, type, year, sort]);
+  }, [query, activeThemes, activeDomain, journal, type, year, sort]);
 
   const yearCounts: YearCount[] = useMemo(() => {
     const m = new Map<number, number>();
@@ -100,16 +124,16 @@ export default function PublicationsLibrary() {
   }, [filtered, view, sort]);
 
   return (
-    <section className="mx-auto max-w-6xl px-4 py-10">
+    <section className="research-page mx-auto max-w-6xl px-4 py-10">
       {/* Header */}
-      <header className="mb-8">
-        <p className="text-sm font-medium uppercase tracking-widest text-emerald-700">
-          Research Output
+      <header className="research-header mb-8">
+        <p className="section-label">
+          The scholarly archive
         </p>
-        <h1 className="mt-1 text-3xl font-bold text-neutral-900 sm:text-4xl">
-          Publications Library
+        <h1 className="interior-title mt-3 text-3xl font-bold text-neutral-900 sm:text-4xl">
+          Evidence, made <em>public.</em>
         </h1>
-        <p className="mt-2 max-w-2xl text-neutral-600">
+        <p className="research-deck mt-2 max-w-2xl text-neutral-600">
           Peer-reviewed papers, conference work, and technical reports on
           deforestation, cocoa landscapes, remote sensing, and natural resource
           management in Ghana. Search, filter, and export citations.
@@ -121,9 +145,9 @@ export default function PublicationsLibrary() {
 
       {/* Featured */}
       {featured.length > 0 && (
-        <div className="mt-8">
+        <div className="featured-research mt-8">
           <h2 className="mb-3 text-lg font-semibold text-neutral-900">
-            Featured papers
+            <span>01 /</span> Selected evidence
           </h2>
           <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2">
             {featured.map((p) => (
@@ -136,19 +160,58 @@ export default function PublicationsLibrary() {
       )}
 
       {/* Year chart */}
-      <div className="mt-8">
+      <div className="research-chart mt-8">
         <YearChart data={yearCounts} activeYear={year} onSelect={setYear} />
       </div>
 
       {/* Controls */}
-      <div className="mt-8 space-y-4 rounded-xl border border-neutral-200 bg-white p-4 shadow-sm">
-        <div className="flex flex-col gap-3 sm:flex-row">
+      <div className="research-controls mt-8 space-y-4 rounded-xl border border-neutral-200 bg-white p-5 shadow-sm">
+        {/* Research Domains Filter Bar */}
+        <div>
+          <p className="section-label mb-3">Research Domains</p>
+          <div className="flex flex-wrap gap-2">
+            <button
+              onClick={() => setActiveDomain("all")}
+              className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold transition-all ${
+                activeDomain === "all"
+                  ? "bg-[#111111] text-white shadow-sm"
+                  : "border border-[#dce5e9] bg-white text-[#59656d] hover:border-[#111111] hover:text-[#111111]"
+              }`}
+            >
+              All Domains
+            </button>
+            {(Object.keys(DOMAIN_METAS) as DomainKey[]).map((dk) => {
+              const meta = DOMAIN_METAS[dk];
+              const isActive = activeDomain === dk;
+              return (
+                <button
+                  key={dk}
+                  onClick={() => setActiveDomain(isActive ? "all" : dk)}
+                  className={`inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-xs font-semibold transition-all ${
+                    isActive
+                      ? "text-white shadow-sm"
+                      : "border border-[#dce5e9] bg-white text-[#59656d] hover:border-[#111111]"
+                  }`}
+                  style={{
+                    backgroundColor: isActive ? meta.color : undefined,
+                    borderColor: isActive ? meta.color : undefined,
+                  }}
+                >
+                  <DomainEmblem domain={dk} size={18} />
+                  <span>{meta.label}</span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-3 sm:flex-row pt-2 border-t border-neutral-100">
           <input
             type="search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search titles, authors, journals, themes…"
-            className="w-full rounded-lg border border-neutral-300 px-3 py-2 text-sm outline-none focus:border-emerald-600 focus:ring-2 focus:ring-emerald-100"
+            className="w-full rounded-lg border border-neutral-300 px-3 py-2 text-sm outline-none focus:border-[#d96b28] focus:ring-2 focus:ring-[#d96b28]/15"
           />
           <div className="flex gap-3">
             <select
@@ -192,10 +255,10 @@ export default function PublicationsLibrary() {
               <button
                 key={t}
                 onClick={() => toggleTheme(t)}
-                className={`rounded-full px-3 py-1 text-xs font-medium transition-colors ${
+                className={`rounded-full px-3 py-1 font-mono text-xs transition-colors ${
                   active
-                    ? "bg-emerald-700 text-white"
-                    : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
+                    ? "bg-[#1e7a4c] text-white"
+                    : "bg-[#f3f6f8] text-neutral-600 hover:bg-[#e4ebef]"
                 }`}
               >
                 #{t}
@@ -213,21 +276,21 @@ export default function PublicationsLibrary() {
             {hasFilters && (
               <button
                 onClick={clearAll}
-                className="text-xs font-medium text-red-600 hover:underline"
+                className="text-xs font-semibold text-[#d96b28] hover:underline"
               >
                 Clear filters
               </button>
             )}
             <div className="flex rounded-lg border border-neutral-300 p-0.5 text-xs font-medium">
-              {(["grid", "timeline"] as ViewMode[]).map((v) => (
+              {(["manuscript", "timeline"] as ViewMode[]).map((v) => (
                 <button
                   key={v}
                   onClick={() => setView(v)}
-                  className={`rounded-md px-3 py-1 capitalize ${
-                    view === v ? "bg-neutral-900 text-white" : "text-neutral-600"
+                  className={`rounded-md px-3 py-1 capitalize transition-colors ${
+                    view === v ? "bg-neutral-900 text-white" : "text-neutral-600 hover:text-neutral-900"
                   }`}
                 >
-                  {v}
+                  {v === "manuscript" ? "Manuscript View" : "By Year"}
                 </button>
               ))}
             </div>
@@ -235,34 +298,62 @@ export default function PublicationsLibrary() {
         </div>
       </div>
 
-      {/* Results */}
-      {view === "grid" ? (
-        <motion.div layout className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <AnimatePresence mode="popLayout">
-            {filtered.map((p) => (
-              <PublicationCard key={p.id} pub={p} onThemeClick={toggleTheme} />
-            ))}
-          </AnimatePresence>
-        </motion.div>
+      {/* Results: Tactile Manuscript Scroll */}
+      {view === "manuscript" ? (
+        <ScrollContainer
+          className="research-scroll mt-8"
+          headerLabel={
+            activeDomain === "all"
+              ? `Research Archives · ${filtered.length} Documented Publications`
+              : `${DOMAIN_METAS[activeDomain].label} · ${filtered.length} Publications`
+          }
+          headerIcon={
+            activeDomain !== "all" ? (
+              <DomainEmblem domain={activeDomain} size={18} />
+            ) : undefined
+          }
+          accentTone={activeDomain === "all" ? "default" : activeDomain}
+        >
+          <div className="divide-y divide-[#e2d8c3]">
+            <AnimatePresence mode="popLayout">
+              {filtered.map((p) => (
+                <PublicationScrollItem
+                  key={p.id}
+                  pub={p}
+                  onThemeClick={toggleTheme}
+                />
+              ))}
+            </AnimatePresence>
+          </div>
+        </ScrollContainer>
       ) : (
-        <div className="mt-6 space-y-8">
-          {groupedByYear.map(([y, pubs]) => (
-            <div key={y}>
-              <div className="mb-3 flex items-center gap-3">
-                <span className="text-xl font-bold text-emerald-800">{y}</span>
-                <div className="h-px flex-1 bg-neutral-200" />
-                <span className="text-xs text-neutral-400">
-                  {pubs.length} {pubs.length === 1 ? "entry" : "entries"}
-                </span>
+        <ScrollContainer
+          className="research-scroll mt-8"
+          headerLabel={`Chronological Archive · ${filtered.length} Entries (2007–Present)`}
+        >
+          <div className="space-y-8">
+            {groupedByYear.map(([y, pubs]) => (
+              <div key={y} className="border-b border-[#e2d8c3] pb-6 last:border-b-0 last:pb-0">
+                <div className="mb-3 flex items-center gap-3">
+                  <span className="font-display text-2xl font-bold text-[#1e7a4c]">{y}</span>
+                  <div className="h-px flex-1 bg-[#d8ccb4]" />
+                  <span className="font-mono text-xs text-[#59656d]">
+                    {pubs.length} {pubs.length === 1 ? "entry" : "entries"}
+                  </span>
+                </div>
+                <div className="divide-y divide-[#e2d8c3]">
+                  {pubs.map((p) => (
+                    <PublicationScrollItem
+                      key={p.id}
+                      pub={p}
+                      onThemeClick={toggleTheme}
+                    />
+                  ))}
+                </div>
               </div>
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {pubs.map((p) => (
-                  <PublicationCard key={p.id} pub={p} onThemeClick={toggleTheme} />
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </ScrollContainer>
       )}
 
       {filtered.length === 0 && (

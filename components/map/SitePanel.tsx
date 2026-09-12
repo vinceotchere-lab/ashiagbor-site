@@ -1,117 +1,28 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import DomainEmblem, { type DomainKey } from "../shared/DomainEmblem";
 
-export type StudySite = {
-  id: string;
-  name: string;
-  region: string;
-  coords: [number, number];
-  category: string;
-  period: string;
-  summary: string;
-  themes: string[];
-  publications: string[]; // ids from publications.json
+export type StudySite = { id:string; name:string; region:string; coords:[number,number]; category:string; period:string; summary:string; themes:string[]; publications:string[] };
+export type LinkedPub = { id:string; title:string; year:number; doi?:string };
+export const CATEGORY_STYLES: Record<string,{label:string;color:string;domain:DomainKey}> = {
+  "cocoa-forest": { label:"Cocoa–Forest Mosaic", color:"#e85d2a", domain:"cocoa" },
+  forest: { label:"Forest Reserve Canopy", color:"#4f8a68", domain:"forest" },
+  wetland: { label:"Wetland & Coastal Lagoon", color:"#55a3aa", domain:"wetland" },
+  wildlife: { label:"Wildlife Conservation Area", color:"#87a35a", domain:"forest" },
+  urban: { label:"Urban & Peri-Urban Zone", color:"#bf784b", domain:"soil" },
+  savanna: { label:"Savanna & Riparian Basin", color:"#d19a54", domain:"soil" },
 };
+const coord = (v:number,pos:string,neg:string) => `${Math.abs(v).toFixed(2)}°${v>=0?pos:neg}`;
 
-export const CATEGORY_STYLES: Record<string, { label: string; color: string }> = {
-  "cocoa-forest": { label: "Cocoa–forest mosaic", color: "#d97706" },
-  forest: { label: "Forest reserve", color: "#047857" },
-  wetland: { label: "Wetland & lagoon", color: "#0284c7" },
-  wildlife: { label: "Wildlife area", color: "#7c3aed" },
-  urban: { label: "Urban landscape", color: "#dc2626" },
-  savanna: { label: "Savanna & rivers", color: "#ca8a04" },
-};
-
-export type LinkedPub = { id: string; title: string; year: number; doi?: string };
-
-const fmtCoord = (v: number, pos: string, neg: string) =>
-  `${Math.abs(v).toFixed(2)}° ${v >= 0 ? pos : neg}`;
-
-type Props = {
-  site: StudySite | null;
-  pubs: LinkedPub[];
-  onClose: () => void;
-};
-
-export default function SitePanel({ site, pubs, onClose }: Props) {
-  return (
-    <AnimatePresence>
-      {site && (
-        <motion.aside
-          key={site.id}
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 24 }}
-          transition={{ duration: 0.3 }}
-          className="absolute inset-x-3 bottom-3 z-[1100] max-h-[55%] overflow-y-auto rounded-xl border border-neutral-200 bg-white/95 p-5 shadow-xl backdrop-blur sm:inset-x-auto sm:bottom-4 sm:left-4 sm:w-[380px]"
-        >
-          <button
-            onClick={onClose}
-            aria-label="Close panel"
-            className="absolute right-3 top-3 rounded-full bg-[#f3f6f8] px-2.5 py-1 text-xs font-medium text-[#59656d] hover:bg-[#eaf2f5]"
-          >
-            Close
-          </button>
-
-          <span
-            className="inline-block rounded-full px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-white"
-            style={{ background: CATEGORY_STYLES[site.category]?.color ?? "#525252" }}
-          >
-            {CATEGORY_STYLES[site.category]?.label ?? site.category}
-          </span>
-
-          <h3 className="mt-2 font-display text-lg font-semibold tracking-[-0.04em] text-[#111111]">
-            {site.name}
-          </h3>
-          <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#59656d]">
-            {site.region} · {fmtCoord(site.coords[0], "N", "S")},{" "}
-            {fmtCoord(site.coords[1], "E", "W")} · {site.period}
-          </p>
-
-          <p className="mt-3 text-sm leading-relaxed text-[#59656d]">
-            {site.summary}
-          </p>
-
-          <div className="mt-3 flex flex-wrap gap-1.5">
-            {site.themes.map((t) => (
-              <span
-                key={t}
-                className="rounded-full bg-[#f3f6f8] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#59656d]"
-              >
-                #{t}
-              </span>
-            ))}
-          </div>
-
-          {pubs.length > 0 && (
-            <div className="mt-4 border-t border-[#dce5e9] pt-3">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[#59656d]">
-                Related publications
-              </p>
-              <ul className="mt-2 space-y-2">
-                {pubs.map((p) => (
-                  <li key={p.id} className="text-sm leading-snug text-[#59656d]">
-                    {p.doi ? (
-                      <a
-                        href={`https://doi.org/${p.doi}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="font-medium text-[#111111] hover:text-[#d96b28]"
-                      >
-                        {p.title}
-                      </a>
-                    ) : (
-                      <span className="font-medium text-[#111111]">{p.title}</span>
-                    )}
-                    <span className="ml-1 text-[10px] uppercase tracking-[0.12em] text-[#59656d]">({p.year})</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </motion.aside>
-      )}
-    </AnimatePresence>
-  );
+export default function SitePanel({ site, pubs, onClose }:{site:StudySite|null;pubs:LinkedPub[];onClose:()=>void}) {
+  const category = site ? CATEGORY_STYLES[site.category] : null;
+  return <AnimatePresence>{site && <motion.aside key={site.id} initial={{opacity:0,x:-18}} animate={{opacity:1,x:0}} exit={{opacity:0,x:-18}} transition={{duration:.3}} className="site-dossier" style={{"--dossier-accent":category?.color ?? "#e85d2a"} as React.CSSProperties}>
+    <div className="dossier-top"><span>FIELD DOSSIER / {site.id.replaceAll("-"," ")}</span><button onClick={onClose} aria-label="Close field dossier">CLOSE ×</button></div>
+    <div className="dossier-title"><DomainEmblem domain={category?.domain ?? "forest"} size={38}/><div><small>{category?.label}</small><h3>{site.name}</h3></div></div>
+    <div className="dossier-coordinates"><span>{coord(site.coords[0],"N","S")}</span><span>{coord(site.coords[1],"E","W")}</span><span>{site.period}</span></div>
+    <p className="dossier-summary">{site.summary}</p>
+    <div className="dossier-themes">{site.themes.map(theme=><span key={theme}>#{theme}</span>)}</div>
+    {pubs.length>0 && <div className="dossier-pubs"><span>ASSOCIATED EVIDENCE · {pubs.length}</span>{pubs.map(pub=>pub.doi?<a key={pub.id} href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer"><b>{pub.year}</b>{pub.title}<i>↗</i></a>:<p key={pub.id}><b>{pub.year}</b>{pub.title}</p>)}</div>}
+  </motion.aside>}</AnimatePresence>;
 }

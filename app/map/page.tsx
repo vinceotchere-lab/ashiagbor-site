@@ -4,26 +4,23 @@ import dynamic from "next/dynamic";
 
 const StudySitesMap = dynamic(() => import("@/components/map/StudySitesMap"), {
   ssr: false,
-  loading: () => (
-    <div className="flex h-[72vh] items-center justify-center rounded-[14px] border border-[#dce5e9] bg-white text-sm text-[#59656d]">
-      Loading research atlas...
-    </div>
-  ),
+  loading: () => <div className="atlas-loading"><span>Calibrating field atlas</span><i /></div>,
 });
 
 export default function StudySitesPage() {
   return (
-    <main className="site-shell py-10 md:py-14">
-      <header className="mb-6">
-        <p className="section-label">Research atlas</p>
-        <h1 className="mt-4 font-display text-3xl font-semibold tracking-[-0.06em] text-ink sm:text-4xl md:text-5xl">
-          Research Atlas
-        </h1>
-        <p className="mt-3 max-w-3xl text-base leading-relaxed text-[#59656d]">
-          Study sites spanning Ghana&apos;s cocoa landscapes, forest reserves, wetlands, and wildlife areas — the places where geospatial evidence and environmental decision-making meet.
-        </p>
+    <main className="atlas-page">
+      <header className="site-shell atlas-masthead">
+        <div>
+          <p className="section-label light">Research atlas · Ghana</p>
+          <h1>The field is the<br /><em>final authority.</em></h1>
+        </div>
+        <div className="atlas-intro">
+          <p>Thirteen landscapes where satellite inference meets field evidence—from cocoa–forest mosaics in Western North to the mangroves of Keta Lagoon.</p>
+          <dl><div><dt>Sites</dt><dd>13</dd></div><div><dt>Regions</dt><dd>8</dd></div><div><dt>Earliest record</dt><dd>2011</dd></div></dl>
+        </div>
       </header>
-      <StudySitesMap />
+      <section className="site-shell atlas-workspace"><StudySitesMap /></section>
     </main>
   );
 }

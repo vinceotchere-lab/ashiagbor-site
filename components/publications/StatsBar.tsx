@@ -26,26 +26,44 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
 
 export default function StatsBar({ yearsActive }: { yearsActive: number }) {
   const stats = [
-    { label: "Publications", value: SCHOLAR_STATS.totalPublications, suffix: "+" },
-    { label: "Citations", value: SCHOLAR_STATS.citations, suffix: "+" },
-    { label: "h-index", value: SCHOLAR_STATS.hIndex, suffix: "" },
-    { label: "Years publishing", value: yearsActive, suffix: "" },
+    {
+      chapter: "VERIFIED",
+      label: "PUBLICATIONS",
+      value: SCHOLAR_STATS.totalPublications,
+      suffix: "+",
+    },
+    {
+      chapter: "IMPACT",
+      label: "CITATIONS",
+      value: SCHOLAR_STATS.citations,
+      suffix: "+",
+    },
+    {
+      chapter: "INDEX",
+      label: "H-INDEX",
+      value: SCHOLAR_STATS.hIndex,
+      suffix: "",
+    },
+    {
+      chapter: "RECORD",
+      label: "YEARS ACTIVE",
+      value: yearsActive,
+      suffix: "+",
+    },
   ];
 
   return (
-    <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+    <div className="grid4 my-8 bg-[#f8f3e9]/60">
       {stats.map((s) => (
-        <div
-          key={s.label}
-          className="rounded-xl border border-neutral-200 bg-white p-4 text-center shadow-sm"
-        >
-          <div className="text-3xl font-bold tabular-nums text-neutral-900">
+        <article key={s.chapter} className="flex flex-col justify-between p-6">
+          <span className="chapter">{s.chapter}</span>
+          <div className="my-3 font-display text-4xl font-bold tracking-tight text-[#171714] sm:text-5xl">
             <Counter to={s.value} suffix={s.suffix} />
           </div>
-          <div className="mt-1 text-xs uppercase tracking-wide text-neutral-500">
+          <p className="annotation font-mono text-[11px] uppercase tracking-wider text-[#77746c]">
             {s.label}
-          </div>
-        </div>
+          </p>
+        </article>
       ))}
     </div>
   );
