@@ -58,7 +58,11 @@ export default function StudySitesMap() {
 
       <div className="atlas-map-frame">
         <MapContainer center={GHANA_CENTER} zoom={7} scrollWheelZoom className="atlas-map">
-          <TileLayer url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png" attribution='&copy; <a href="https://carto.com/">CARTO</a> &copy; OpenStreetMap contributors' maxZoom={19} />
+          <TileLayer
+            url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}"
+            attribution="Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ"
+            maxZoom={16}
+          />
           <ScaleControl position="bottomright" imperial={false} />
           <MapController target={target} />
           {visibleSites.map((site) => {

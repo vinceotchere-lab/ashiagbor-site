@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import type { Publication } from "./types";
 import rawData from "./publications.json";
@@ -125,20 +126,47 @@ export default function PublicationsLibrary() {
 
   return (
     <section className="research-page mx-auto max-w-6xl px-4 py-10">
-      {/* Header */}
-      <header className="research-header mb-8">
-        <p className="section-label">
-          The scholarly archive
-        </p>
-        <h1 className="interior-title mt-3 text-3xl font-bold text-neutral-900 sm:text-4xl">
-          Evidence, made <em>public.</em>
-        </h1>
-        <p className="research-deck mt-2 max-w-2xl text-neutral-600">
-          Peer-reviewed papers, conference work, and technical reports on
-          deforestation, cocoa landscapes, remote sensing, and natural resource
-          management in Ghana. Search, filter, and export citations.
-        </p>
-      </header>
+      {/* Header with Field Telemetry Vantage Card */}
+      <div className="mb-10 pb-8 border-b border-[#cfc4b1]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+          <div className="lg:col-span-7">
+            <p className="section-label">The scholarly archive</p>
+            <h1 className="interior-title mt-4 font-serif text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl lg:text-6xl">
+              Evidence, made <em>public.</em>
+            </h1>
+            <p className="mt-4 text-base leading-relaxed text-[#51544f] max-w-xl">
+              Peer-reviewed papers, conference proceedings, and technical reports on
+              deforestation, cocoa agroforestry landscapes, synthetic aperture radar,
+              and natural resource management in Ghana. Ground-truthed across West Africa’s forest ecosystems.
+            </p>
+          </div>
+
+          <div className="lg:col-span-5">
+            <div className="reticle-box relative overflow-hidden border border-[#cfc4b1] bg-[#f8f3e9] shadow-[8px_8px_0_var(--ink)]">
+              <div className="relative aspect-[16/10] w-full overflow-hidden">
+                <Image
+                  src="/images/nice-nature.jpg"
+                  alt="Dr. George Ashiagbor conducting field telemetry and UAV remote sensing"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 36vw"
+                  className="object-cover object-[center_30%]"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute top-2.5 left-2.5 bg-[#111310]/85 border border-[#585c54] text-[#ece5d8] px-2 py-0.5 text-[9px] font-mono tracking-widest uppercase">
+                  <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#79da9d] mr-1.5 animate-pulse" />
+                  FIELD SENSING · TELEMETRY
+                </div>
+                <div className="absolute bottom-2.5 left-3 right-3 text-white">
+                  <p className="font-mono text-[9px] uppercase tracking-wider text-[#e85d2a]">Lead Researcher</p>
+                  <p className="font-serif text-base font-semibold leading-tight text-[#f1eadc]">Dr. George Ashiagbor in the field</p>
+                  <p className="text-[10px] text-[#c9c4b8] font-mono">High Forest Zone Ground-Truthing · Ghana</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Stats */}
       <StatsBar yearsActive={yearsActive} />
@@ -149,9 +177,9 @@ export default function PublicationsLibrary() {
           <h2 className="mb-3 text-lg font-semibold text-neutral-900">
             <span>01 /</span> Selected evidence
           </h2>
-          <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {featured.map((p) => (
-              <div key={p.id} className="w-[320px] shrink-0 snap-start sm:w-[420px]">
+              <div key={p.id} className="w-full">
                 <PublicationCard pub={p} onThemeClick={toggleTheme} />
               </div>
             ))}

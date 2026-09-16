@@ -189,8 +189,8 @@ export default function CareerTimeline() {
             </div>
 
             {/* End Cap */}
-            <div className="relative mt-12 flex md:justify-center">
-              <span className="ml-5 -translate-x-1/2 rounded-full border border-dashed border-[#b8aa90] bg-[#fdfaf5] px-4 py-1.5 font-mono text-xs text-[#59656d] md:ml-0 md:translate-x-0">
+            <div className="relative mt-12 flex justify-center text-center w-full">
+              <span className="rounded-full border border-dashed border-[#b8aa90] bg-[#fdfaf5] px-4 py-1.5 font-mono text-[11px] sm:text-xs text-[#59656d] shadow-xs">
                 Active Research &amp; Field Work Continues
               </span>
             </div>

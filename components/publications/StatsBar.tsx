@@ -7,12 +7,11 @@ import { SCHOLAR_STATS } from "./types";
 function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
   const mv = useMotionValue(0);
-  const spring = useSpring(mv, { duration: 1.8, bounce: 0 });
-  const inView = useInView(ref, { once: true, margin: "-40px" });
+  const spring = useSpring(mv, { duration: 1.4, bounce: 0 });
 
   useEffect(() => {
-    if (inView) mv.set(to);
-  }, [inView, to, mv]);
+    mv.set(to);
+  }, [to, mv]);
 
   useEffect(() => {
     return spring.on("change", (v) => {
@@ -21,7 +20,7 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
     });
   }, [spring, suffix]);
 
-  return <span ref={ref}>0</span>;
+  return <span ref={ref}>{to}{suffix}</span>;
 }
 
 export default function StatsBar({ yearsActive }: { yearsActive: number }) {

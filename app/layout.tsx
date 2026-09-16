@@ -10,6 +10,13 @@ export const metadata: Metadata = {
   },
   description:
     "Senior Lecturer at KNUST mapping Ghana's changing landscapes from space: deforestation, cocoa-forest mosaics, forest monitoring, and EUDR map validation.",
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/icon.svg",
+  },
 };
 
 export default function RootLayout({

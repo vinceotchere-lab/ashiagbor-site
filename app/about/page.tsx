@@ -16,7 +16,7 @@ const education=[
 export default function AboutPage(){return <main className="profile-page">
   <section className="site-shell profile-hero">
     <div className="profile-title"><p className="section-label">Profile · The observer</p><h1>Grounded in Ghana.<br /><em>Looking from orbit.</em></h1><p className="profile-deck">Ing. Dr. George Ashiagbor is a geospatial scientist whose work makes environmental change visible—and therefore possible to act upon.</p></div>
-    <div className="profile-image"><Image src="/images/ghana_satellite_canopy.jpg" alt="Satellite canopy imagery of Ghana's High Forest Zone" fill sizes="(max-width:900px) 100vw, 42vw" className="object-cover"/><div className="profile-image-grid"/><span>HIGH FOREST ZONE · GHANA<br/>GROUND / ORBIT / POLICY</span></div>
+    <div className="profile-image"><Image src="/images/naruto-inspired.jpg" alt="Portrait illustration of Ing. Dr. George Ashiagbor, geospatial scientist" fill sizes="(max-width:900px) 100vw, 42vw" className="object-cover object-[center_20%]" priority /><div className="profile-image-grid"/><span>ING. DR. GEORGE ASHIAGBOR<br/>SENIOR LECTURER · GEOMATIC ENGINEERING · KNUST</span></div>
     <div className="profile-seal"><strong>PhD</strong><span>GEOMATIC<br/>ENGINEERING</span><small>KNUST · 2020</small></div>
   </section>
 
