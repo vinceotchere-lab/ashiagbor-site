@@ -1,5 +1,6 @@
 import Link from "next/link";
 import SiteLogo from "./SiteLogo";
+import ArrowUpRight from "../shared/ArrowUpRight";
 
 export default function SiteFooter() {
   return (
@@ -20,7 +21,10 @@ export default function SiteFooter() {
           <div className="footer-contact">
             <span>Based at</span>
             <p>KNUST · Kumasi, Ghana<br />06°40′N · 01°34′W</p>
-            <a href="mailto:gashiagbor.canr@knust.edu.gh">gashiagbor.canr@knust.edu.gh ↗</a>
+            <a href="mailto:gashiagbor.canr@knust.edu.gh" className="inline-flex items-center gap-1">
+              <span>gashiagbor.canr@knust.edu.gh</span>
+              <ArrowUpRight className="w-3 h-3" />
+            </a>
           </div>
         </div>
         <div className="footer-base">
@@ -45,7 +49,7 @@ export default function SiteFooter() {
                 className="creator-logo"
               />
               <span className="creator-brand">BitShift</span>
-              <span className="creator-arrow">↗</span>
+              <span className="creator-arrow"><ArrowUpRight className="w-2.5 h-2.5" /></span>
             </span>
           </a>
         </div>

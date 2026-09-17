@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Publication } from "./types";
+import ArrowUpRight from "../shared/ArrowUpRight";
 
 function apaAuthors(authors: string[]): string {
   const fmt = authors.map((a) => {
@@ -142,9 +143,10 @@ export default function PublicationCard({ pub, onThemeClick }: Props) {
                     href={link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-lg bg-neutral-900 px-3 py-1.5 text-xs font-medium text-white hover:bg-neutral-700"
+                    className="inline-flex items-center gap-1.5 rounded-lg bg-neutral-900 px-3 py-1.5 text-xs font-medium text-white hover:bg-neutral-700"
                   >
-                    {pub.doi ? "View on DOI ↗" : "View report ↗"}
+                    <span>{pub.doi ? "View on DOI" : "View report"}</span>
+                    <ArrowUpRight className="w-3 h-3" />
                   </a>
                 )}
                 <button

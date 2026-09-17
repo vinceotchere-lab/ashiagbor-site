@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import ArrowUpRight from "../shared/ArrowUpRight";
 
 const signals = [["37+", "published works"], ["13", "field landscapes"], ["18+", "years of practice"]];
 
@@ -17,7 +18,7 @@ export default function HomeHeroLight() {
           <p className="hero-kicker"><span>GHA · EO/01</span> Senior Lecturer &amp; Geospatial Scientist</p>
           <h1>Seeing what the<br /><em>land remembers.</em></h1>
           <p className="hero-intro">Ing. Dr. George Ashiagbor reads Ghana’s changing landscapes from orbit—turning satellite signals into evidence for forests, cocoa farms, wetlands, and policy.</p>
-          <div className="hero-actions"><Link href="/map" className="button-primary">Enter the field atlas <span>↗</span></Link><Link href="/about" className="hero-text-link">Meet the researcher <span>→</span></Link></div>
+          <div className="hero-actions"><Link href="/map" className="button-primary">Enter the field atlas <span><ArrowUpRight className="w-3.5 h-3.5" /></span></Link><Link href="/about" className="hero-text-link">Meet the researcher <span>→</span></Link></div>
         </div>
         <aside className="hero-readout">
           <span className="readout-label">Current signal</span><strong>EUDR forest / non-forest map validation</strong><small>European Forest Institute · 2024—present</small>

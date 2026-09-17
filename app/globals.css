@@ -34,7 +34,8 @@ h1,h2,h3 { font-family: var(--font-display), Georgia, serif; letter-spacing: -.0
 .button-primary { display: inline-flex; align-items: center; justify-content: center; gap: 1.4rem; border: 1px solid var(--orange); background: var(--orange); color: #fff; padding: .95rem 1.2rem; font-size: .78rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; transition: .25s ease; }
 .button-primary:hover { background: transparent; color: var(--orange); transform: translateY(-2px); }
 .button-secondary { display: inline-flex; border: 1px solid var(--ink); padding: .9rem 1.15rem; font-size: .8rem; font-weight: 700; }
-.ink-link { display: inline-flex; gap: 1rem; padding-bottom: .35rem; border-bottom: 1px solid currentColor; font-size: .78rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+.ink-link { display: inline-flex; align-items: center; gap: .6rem; padding-bottom: .35rem; border-bottom: 1px solid currentColor; font-size: .78rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+.ink-link span, .button-primary span { display: inline-flex; align-items: center; font-variant-emoji: text; }
 .data-panel,.card { background: rgba(248,243,233,.9); border: 1px solid var(--line); border-radius: 0; box-shadow: 8px 8px 0 rgba(23,23,20,.06); }
 .data-chip { display: inline-flex; border: 1px solid var(--line); background: var(--cream); padding: .35rem .65rem; font: 700 .65rem "Courier New", monospace; text-transform: uppercase; }
 .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); border-block: 1px solid var(--line); }

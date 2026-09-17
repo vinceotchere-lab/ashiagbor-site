@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import rawPubs from "@/components/publications/publications.json";
 import type { Publication } from "@/components/publications/types";
 import DomainEmblem, { type DomainKey } from "../shared/DomainEmblem";
+import ArrowUpRight from "../shared/ArrowUpRight";
 
 const publications = rawPubs as Publication[];
 const domains: { code: string; domain: DomainKey; title: string; focus: string; proof: string }[] = [
@@ -93,7 +94,7 @@ export default function HomeSections() {
         <div className="thesis-body">
           <p>Every pixel can hold a forest edge, a cocoa farm, a wetland under pressure, or a policy decision waiting to be made.</p>
           <p>Dr. Ashiagbor’s practice joins <strong>orbital observation</strong> with <strong>ground truth</strong>: seeing change, testing what the sensor suggests, and translating evidence into action.</p>
-          <Link href="/about" className="ink-link">Read the full profile <span>↗</span></Link>
+          <Link href="/about" className="ink-link">Read the full profile <span><ArrowUpRight className="w-3.5 h-3.5" /></span></Link>
         </div>
       </section>
 
@@ -122,7 +123,7 @@ export default function HomeSections() {
                 <p>{item.focus}</p>
                 <div>
                   <span>{item.proof}</span>
-                  <Link href="/publications">Open dossier ↗</Link>
+                  <Link href="/publications">Open dossier <ArrowUpRight className="w-3 h-3 ml-0.5" /></Link>
                 </div>
               </motion.article>
             ))}
@@ -162,7 +163,7 @@ export default function HomeSections() {
             <span>03 / SCHOLARLY RECORD</span>
             <p className="section-label">Recent manuscripts</p>
             <h2>Evidence,<br /><em>made public.</em></h2>
-            <Link href="/publications" className="ink-link">Search all {publications.length} works ↗</Link>
+            <Link href="/publications" className="ink-link">Search all {publications.length} works <ArrowUpRight className="w-3.5 h-3.5 ml-1" /></Link>
           </div>
           <div className="paper-list">
             {latest.map((pub, index) => (
@@ -173,7 +174,7 @@ export default function HomeSections() {
                   <h3>{pub.title}</h3>
                   <p>{pub.themes.slice(0, 3).join(" / ")}</p>
                 </div>
-                <b>↗</b>
+                <b><ArrowUpRight className="w-3.5 h-3.5" /></b>
               </Link>
             ))}
           </div>
@@ -244,7 +245,7 @@ export default function HomeSections() {
         <div className="site-shell">
           <span>13 SITES · 8 REGIONS · ONE LIVING ATLAS</span>
           <h2>Do not take the map’s word for it.<br /><em>Enter the field.</em></h2>
-          <Link href="/map" className="button-primary">Explore Ghana’s study sites <span>↗</span></Link>
+          <Link href="/map" className="button-primary">Explore Ghana’s study sites <span><ArrowUpRight className="w-3.5 h-3.5" /></span></Link>
         </div>
       </section>
     </div>

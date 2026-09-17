@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import SiteLogo from "./SiteLogo";
+import ArrowUpRight from "../shared/ArrowUpRight";
 
 const navItems = [
   { href: "/about", label: "Profile", code: "01" },
@@ -25,7 +26,7 @@ export default function SiteHeader() {
               <span>{item.code}</span>{item.label}
             </Link>
           ))}
-          <Link href="/connect" className="nav-contact" onClick={() => setIsOpen(false)}>Open a dialogue <span>↗</span></Link>
+          <Link href="/connect" className="nav-contact" onClick={() => setIsOpen(false)}>Open a dialogue <span><ArrowUpRight className="w-3 h-3" /></span></Link>
         </nav>
         <button className="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded={isOpen} onClick={() => setIsOpen(!isOpen)}><span /><span /></button>
       </div>

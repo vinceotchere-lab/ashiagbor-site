@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import DomainEmblem, { type DomainKey } from "@/components/shared/DomainEmblem";
+import ArrowUpRight from "@/components/shared/ArrowUpRight";
 
 export const metadata = { title:"Profile", description:"Biography, education, and appointments of Ing. Dr. George Ashiagbor, KNUST geospatial scientist." };
 const roles:{title:string;org:string;code:string;domain:DomainKey}[]=[
@@ -26,5 +27,5 @@ export default function AboutPage(){return <main className="profile-page">
 
   <section className="formation-section"><div className="site-shell formation-grid"><div className="formation-intro"><span>02 / FORMATION</span><p className="section-label light">Degrees & specialist training</p><h2>A discipline refined<br/><em>across borders.</em></h2><p>From geodetic foundations in Kumasi to forest degradation and radar training in the United Kingdom.</p></div><ol>{education.map(([year,title,org],index)=><li key={title}><span>{year}</span><i>{String(index+1).padStart(2,"0")}</i><div><h3>{title}</h3><p>{org}</p></div></li>)}</ol></div></section>
 
-  <section className="site-shell profile-close"><div><p className="section-label">Professional practice</p><h2>Engineering rigour.<br/>Ecological responsibility.</h2></div><div><p>Member of the Ghana Institution of Engineers and the Ghana Geospatial Society. Working in English, Ga/Dangme, and Twi.</p><div><Link href="/publications" className="button-primary">Open research archive <span>↗</span></Link><Link href="/connect" className="ink-link">Discuss a collaboration →</Link></div></div></section>
+  <section className="site-shell profile-close"><div><p className="section-label">Professional practice</p><h2>Engineering rigour.<br/>Ecological responsibility.</h2></div><div><p>Member of the Ghana Institution of Engineers and the Ghana Geospatial Society. Working in English, Ga/Dangme, and Twi.</p><div><Link href="/publications" className="button-primary">Open research archive <span><ArrowUpRight className="w-3.5 h-3.5" /></span></Link><Link href="/connect" className="ink-link">Discuss a collaboration →</Link></div></div></section>
   </main>}

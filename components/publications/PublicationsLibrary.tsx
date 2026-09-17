@@ -146,7 +146,7 @@ export default function PublicationsLibrary() {
               <div className="relative aspect-[16/10] w-full overflow-hidden">
                 <Image
                   src="/images/nice-nature.jpg"
-                  alt="Dr. George Ashiagbor conducting field telemetry and UAV remote sensing"
+                  alt="Ing. Dr. George Ashiagbor conducting field telemetry and UAV remote sensing"
                   fill
                   sizes="(max-width: 1024px) 100vw, 36vw"
                   className="object-cover object-[center_30%]"
@@ -159,7 +159,7 @@ export default function PublicationsLibrary() {
                 </div>
                 <div className="absolute bottom-2.5 left-3 right-3 text-white">
                   <p className="font-mono text-[9px] uppercase tracking-wider text-[#e85d2a]">Lead Researcher</p>
-                  <p className="font-serif text-base font-semibold leading-tight text-[#f1eadc]">Dr. George Ashiagbor in the field</p>
+                  <p className="font-serif text-base font-semibold leading-tight text-[#f1eadc]">Ing. Dr. George Ashiagbor in the field</p>
                   <p className="text-[10px] text-[#c9c4b8] font-mono">High Forest Zone Ground-Truthing · Ghana</p>
                 </div>
               </div>

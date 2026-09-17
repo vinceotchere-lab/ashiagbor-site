@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import DomainEmblem, { type DomainKey } from "../shared/DomainEmblem";
+import ArrowUpRight from "../shared/ArrowUpRight";
 
 export type StudySite = {
   id: string;
@@ -110,7 +111,7 @@ export default function SitePanel({
                   >
                     <b>{pub.year}</b>
                     {pub.title}
-                    <i>↗</i>
+                    <i><ArrowUpRight className="w-2.5 h-2.5" /></i>
                   </a>
                 ) : (
                   <p key={pub.id}>

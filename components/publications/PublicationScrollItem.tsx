@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import type { Publication } from "./types";
 import DomainEmblem, { resolveDomainFromTheme, DOMAIN_METAS } from "../shared/DomainEmblem";
 import { apaCitation, bibtex } from "./PublicationCard";
+import ArrowUpRight from "../shared/ArrowUpRight";
 
 interface Props {
   pub: Publication;
@@ -147,9 +148,10 @@ export default function PublicationScrollItem({ pub, onThemeClick }: Props) {
                         href={link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="button-primary !px-3.5 !py-1.5 !text-xs"
+                        className="button-primary !px-3.5 !py-1.5 !text-xs inline-flex items-center gap-1.5"
                       >
-                        {pub.doi ? "View via DOI ↗" : "View Report ↗"}
+                        <span>{pub.doi ? "View via DOI" : "View Report"}</span>
+                        <ArrowUpRight className="w-3 h-3" />
                       </a>
                     )}
                     <button

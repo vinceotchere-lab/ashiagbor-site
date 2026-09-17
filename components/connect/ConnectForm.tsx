@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import ArrowUpRight from "../shared/ArrowUpRight";
 
 // Static-site friendly: validates, then opens the visitor's mail client
 // pre-addressed to Dr. Ashiagbor. To use a real endpoint instead, create a
@@ -132,7 +133,7 @@ export default function ConnectForm() {
         )}
       </div>
 
-      <div className="field-submit"><button type="submit" className="button-primary">Prepare message <span>↗</span></button><p>Nothing is stored on this site.<br/>Destination: {EMAIL}</p></div>
+      <div className="field-submit"><button type="submit" className="button-primary">Prepare message <span><ArrowUpRight className="w-3.5 h-3.5" /></span></button><p>Nothing is stored on this site.<br/>Destination: {EMAIL}</p></div>
     </form>
   );
 }
