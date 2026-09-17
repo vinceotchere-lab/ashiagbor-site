@@ -42,3 +42,7 @@ next-env.d.ts
 
 # test outputs
 /test-screenshots/
+
+# lockfiles (using bun)
+package-lock.json
+
