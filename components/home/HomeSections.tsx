@@ -147,7 +147,7 @@ export default function HomeSections() {
           <span className="chapter-mark">02 / DEFINING WORK</span>
           <p className="section-label">Forest 2020 Ghana</p>
           <h2>Teaching a satellite to tell cocoa from forest.</h2>
-          <p>As Remote Sensing Technical Lead, Dr. Ashiagbor helped develop Ghana’s harmonised cocoa-landscape classification—turning complex mosaic landscapes into evidence that institutions can use.</p>
+          <p>As Co-Investigator and GIS/Remote Sensing Technical Lead, Dr. Ashiagbor helped develop Ghana's harmonised cocoa-landscape classification—turning complex mosaic landscapes into evidence that institutions can use.</p>
           <dl>
             <div><dt>Role</dt><dd>Technical Lead</dd></div>
             <div><dt>Partners</dt><dd>UK Space Agency · Ecometrica · Forestry Commission</dd></div>

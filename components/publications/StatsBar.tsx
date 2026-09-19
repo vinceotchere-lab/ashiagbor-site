@@ -29,7 +29,7 @@ export default function StatsBar({ yearsActive }: { yearsActive: number }) {
       chapter: "VERIFIED",
       label: "PUBLICATIONS",
       value: SCHOLAR_STATS.totalPublications,
-      suffix: "+",
+      suffix: "",
     },
     {
       chapter: "IMPACT",

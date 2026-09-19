@@ -135,9 +135,7 @@ export default function PublicationsLibrary() {
               Evidence, made <em>public.</em>
             </h1>
             <p className="mt-4 text-base leading-relaxed text-[#51544f] max-w-xl">
-              Peer-reviewed papers, conference proceedings, and technical reports on
-              deforestation, cocoa agroforestry landscapes, synthetic aperture radar,
-              and natural resource management in Ghana. Ground-truthed across West Africa’s forest ecosystems.
+              Dr Ashiagbor's scholarship examines land-use change, forest monitoring, cocoa agroforestry, biodiversity, carbon dynamics, watershed processes, and spatial decision support. The publication record below follows the September 2026 curriculum vitae and includes refereed journal articles and selected technical reports.
             </p>
           </div>
 

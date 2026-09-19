@@ -15,9 +15,9 @@ export type Publication = {
   featured?: boolean;
 };
 
-// Scholar-wide stats (from Google Scholar / Bohrium, Sep 2026 — re-verify before launch)
+// Scholar-wide stats — Google Scholar · September 2026 CV
 export const SCHOLAR_STATS = {
-  totalPublications: 37,
-  citations: 940,
-  hIndex: 14,
+  totalPublications: 34,
+  citations: 1181,
+  hIndex: 17,
 };

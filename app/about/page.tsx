@@ -5,20 +5,20 @@ import ArrowUpRight from "@/components/shared/ArrowUpRight";
 
 export const metadata = { title:"Profile", description:"Biography, education, and appointments of Ing. Dr. George Ashiagbor, KNUST geospatial scientist." };
 const roles:{title:string;org:string;code:string;domain:DomainKey}[]=[
-  {title:"Senior Lecturer",org:"Wildlife & Range Management · KNUST",code:"ACA",domain:"forest"},
-  {title:"Remote Sensing Analyst",org:"EUDR Map Validation · European Forest Institute",code:"EUDR",domain:"remote-sensing"},
-  {title:"Deputy Coordinator",org:"MSc Geo-Information for Natural Resources",code:"MSc",domain:"wetland"},
-  {title:"Co-PI / RS–GIS Lead",org:"FRAME-Cocoa · APNI / CSIR-SRI",code:"PI",domain:"cocoa"},
+  {title:"Head of Department & Senior Lecturer",org:"Wildlife & Range Management · KNUST",code:"ACA",domain:"forest"},
+  {title:"Senior GIS Officer / Principal Investigator",org:"EUDR Map Validation · European Forest Institute",code:"EUDR",domain:"remote-sensing"},
+  {title:"Coordinator",org:"MPhil/MSc GISNATUREM Programme · KNUST",code:"MSc",domain:"wetland"},
+  {title:"Principal Investigator / Remote Sensing Lead",org:"FRAME-Cocoa · APNI / CSIR-SRI",code:"PI",domain:"cocoa"},
 ];
 const education=[
-  ["2020","PhD · Geomatic Engineering","KNUST, Kumasi"],["2019","Forest Degradation Mapping","University of Edinburgh, UK"],["2018","SAR & Microwave Radar","University of Leicester, UK"],["2011","MPhil · Geomatic Engineering","KNUST, Kumasi"],["2007","BSc · Geodetic Engineering","KNUST, Kumasi"],
+  ["2024","MPhil (in progress) · Climate Change & Integrated NRM","CSIR College of Science and Technology, Kumasi"],["2021","PhD · Geomatic Engineering","KNUST, Kumasi"],["2019","Forest Degradation Mapping","University of Edinburgh, UK"],["2018","SAR & Microwave Radar","University of Leicester, UK"],["2011","MPhil · Geomatic Engineering","KNUST, Kumasi"],["2007","BSc · Geodetic Engineering","KNUST, Kumasi"],
 ];
 
 export default function AboutPage(){return <main className="profile-page">
   <section className="site-shell profile-hero">
     <div className="profile-title"><p className="section-label">Profile · The observer</p><h1>Grounded in Ghana.<br /><em>Looking from orbit.</em></h1><p className="profile-deck">Ing. Dr. George Ashiagbor is a geospatial scientist whose work makes environmental change visible—and therefore possible to act upon.</p></div>
-    <div className="profile-image"><Image src="/images/naruto-inspired.jpg" alt="Portrait illustration of Ing. Dr. George Ashiagbor, geospatial scientist" fill sizes="(max-width:900px) 100vw, 42vw" className="object-cover object-[center_20%]" priority /><div className="profile-image-grid"/><span>ING. DR. GEORGE ASHIAGBOR<br/>SENIOR LECTURER · GEOMATIC ENGINEERING · KNUST</span></div>
-    <div className="profile-seal"><strong>PhD</strong><span>GEOMATIC<br/>ENGINEERING</span><small>KNUST · 2020</small></div>
+    <div className="profile-image"><Image src="/images/naruto-inspired.jpg" alt="Portrait illustration of Ing. Dr. George Ashiagbor, geospatial scientist" fill sizes="(max-width:900px) 100vw, 42vw" className="object-cover object-[center_20%]" priority /><div className="profile-image-grid"/><span>ING. DR. GEORGE ASHIAGBOR<br/>HEAD OF DEPT · WILDLIFE & RANGE MANAGEMENT · KNUST</span></div>
+    <div className="profile-seal"><strong>PhD</strong><span>GEOMATIC<br/>ENGINEERING</span><small>KNUST · 2021</small></div>
   </section>
 
   <section className="profile-statement"><div className="site-shell profile-statement-grid"><span className="chapter-mark">01 / POSITION</span><h2>His work lives in the distance between <em>what a satellite sees</em> and <em>what a landscape means.</em></h2><div><p>Across Ghana and West Africa, Dr. Ashiagbor applies multispectral imagery, synthetic aperture radar, GIS, and field validation to forests, cocoa systems, wetlands, wildlife habitats, and changing cities.</p><p>That practice is deliberately applied: research becomes teaching, institutional capability, map-validation protocols, and evidence for deforestation-free commodity policy.</p></div></div></section>

@@ -77,7 +77,7 @@ export default function CareerTimeline() {
         </p>
       </header>
 
-      <div className="journey-stats"><div><span>2007</span><small>first coordinate</small></div><div><span>18+</span><small>years in practice</small></div><div><span>17</span><small>recorded milestones</small></div><div><span>NOW</span><small>active fieldwork</small></div></div>
+      <div className="journey-stats"><div><span>2007</span><small>first coordinate</small></div><div><span>18+</span><small>years in practice</small></div><div><span>20</span><small>recorded milestones</small></div><div><span>NOW</span><small>active fieldwork</small></div></div>
 
       {/* Category Filter Chips */}
       <div className="journey-filters mb-12 flex flex-wrap justify-center gap-2">

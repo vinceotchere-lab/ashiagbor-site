@@ -7,7 +7,9 @@ const links=[
   ["02","LinkedIn","Professional network","https://www.linkedin.com/in/ing-ashiagbor"],
   ["03","Google Scholar","Citations & publications","https://scholar.google.com/citations?user=rw2tffMAAAAJ&hl=en"],
   ["04","ORCID","0000-0001-9215-9366","https://orcid.org/0000-0001-9215-9366"],
-  ["05","KNUST","Official staff profile","https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/c4d93e9be7a3.html"],
+  ["05","Scopus","Author profile","https://www.scopus.com/authid/detail.uri?authorId=57190575322"],
+  ["06","Web of Science","Author record","https://www.webofscience.com/wos/author/record/AAN-6626-2021"],
+  ["07","KNUST","Official staff profile","https://webapps.knust.edu.gh/staff/dirsearch/profile/summary/c4d93e9be7a3.html"],
 ];
 export default function ConnectPage(){return <main className="connect-page">
   <section className="site-shell connect-hero"><div><p className="section-label light">Open channel · Connect</p><h1>Serious questions deserve<br/><em>good company.</em></h1></div><p>For research collaboration, consultancy on forest monitoring and deforestation-free supply chains, graduate supervision, and speaking engagements.</p></section>

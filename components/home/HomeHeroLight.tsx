@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import ArrowUpRight from "../shared/ArrowUpRight";
 
-const signals = [["37+", "published works"], ["13", "field landscapes"], ["18+", "years of practice"]];
+const signals = [["34", "published works"], ["1,181", "Scholar citations"], ["18+", "years in practice"]];
 
 export default function HomeHeroLight() {
   return (
@@ -15,7 +15,7 @@ export default function HomeHeroLight() {
       <div className="hero-contours" aria-hidden="true" />
       <div className="site-shell hero-content">
         <div className="hero-copy">
-          <p className="hero-kicker"><span>GHA · EO/01</span> Senior Lecturer &amp; Geospatial Scientist</p>
+          <p className="hero-kicker"><span>GHA · EO/01</span> Head of Department &amp; Senior Lecturer</p>
           <h1>Seeing what the<br /><em>land remembers.</em></h1>
           <p className="hero-intro">Ing. Dr. George Ashiagbor reads Ghana’s changing landscapes from orbit—turning satellite signals into evidence for forests, cocoa farms, wetlands, and policy.</p>
           <div className="hero-actions"><Link href="/map" className="button-primary">Enter the field atlas <span><ArrowUpRight className="w-3.5 h-3.5" /></span></Link><Link href="/about" className="hero-text-link">Meet the researcher <span>→</span></Link></div>

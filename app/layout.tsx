@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: "%s — Ing. Dr. George Ashiagbor",
   },
   description:
-    "Senior Lecturer at KNUST mapping Ghana's changing landscapes from space: deforestation, cocoa-forest mosaics, forest monitoring, and EUDR map validation.",
+    "Head of Department and Senior Lecturer at KNUST mapping Ghana's changing landscapes from space: deforestation, cocoa-forest mosaics, forest monitoring, and EUDR map validation.",
   icons: {
     icon: [
       { url: "/icon.svg", type: "image/svg+xml" },
